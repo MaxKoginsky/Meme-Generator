@@ -14,15 +14,18 @@
 
     <main>
         <section class="gallery">
-            <img src="imgs/1.jpg" alt="" onclick="setImage('imgs/1.jpg')">
-            <img src="imgs/2.jpg" alt="" onclick="setImage('imgs/2.jpg')">
-            <img src="imgs/3.jpg" alt="" onclick="setImage('imgs/3.jpg')">
-            <img src="imgs/4.jpg" alt="" onclick="setImage('imgs/4.jpg')">
+            <img src="imgs/1.jpg" alt="" onclick="renderMeme('imgs/1.jpg')">
+            <img src="imgs/2.jpg" alt="" onclick="renderMeme('imgs/2.jpg')">
+            <img src="imgs/3.jpg" alt="" onclick="renderMeme('imgs/3.jpg')">
+            <img src="imgs/4.jpg" alt="" onclick="renderMeme('imgs/4.jpg')">
           
         </section>
         
         <section class="editor">
             <canvas class="canvas" width="300" height="300"></canvas>
+            
+            <input type="text" class="text-input" placeholder="Enter text">
+            <button onclick="addText()">Add</button>
           
         </section>
     </main> 
