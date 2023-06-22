@@ -68,5 +68,5 @@ var MemeController = (function(MemeService) {
         changeTextColor: changeTextColor,
         getText: getText,
         renderMeme: renderMeme
-    };
+    }
 })(MemeService)
