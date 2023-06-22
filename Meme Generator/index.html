@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Meme Generator</title>
+</head>
+    
+<body onload="MemeController.onInit()">
+    <header>
+        <h1>Meme Generator</h1>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <img src="imgs/1.jpg" alt="" onclick="MemeController.renderMeme('imgs/1.jpg')">
+            <img src="imgs/2.jpg" alt="" onclick="MemeController.renderMeme('imgs/2.jpg')">
+            <img src="imgs/3.jpg" alt="" onclick="MemeController.renderMeme('imgs/3.jpg')">
+            <img src="imgs/4.jpg" alt="" onclick="MemeController.renderMeme('imgs/4.jpg')">
+          
+        </section>
+        
+        <section class="editor">
+            <canvas class="canvas" width="300" height="300"></canvas>
+            
+            <input type="text" class="text-input" placeholder="Enter text">
+            <button onclick="MemeController.addText()">Add</button>
+            <button onclick="MemeController.increaseFontSize()">+</button>
+            <button onclick="MemeController.decreaseFontSize()">-</button>
+            <input type="color" id="colorPicker" onchange="MemeController.changeTextColor()">
+
+        </section>
+    </main> 
+
+    <script src="js/meme-service.js"></script>
+    <script src="js/meme-controllers.js"></script>
+</body>
+</html>
