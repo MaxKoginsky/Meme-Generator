@@ -39,3 +39,7 @@ body {
     height: 150px;
     margin: 10px;
   }
+
+  .hidden {
+    display: none;
+}

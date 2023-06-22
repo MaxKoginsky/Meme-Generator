@@ -14,14 +14,14 @@
 
     <main>
         <section class="gallery">
-            <img src="imgs/1.jpg" alt="" onclick="MemeController.renderMeme('imgs/1.jpg')">
-            <img src="imgs/2.jpg" alt="" onclick="MemeController.renderMeme('imgs/2.jpg')">
-            <img src="imgs/3.jpg" alt="" onclick="MemeController.renderMeme('imgs/3.jpg')">
-            <img src="imgs/4.jpg" alt="" onclick="MemeController.renderMeme('imgs/4.jpg')">
+            <img src="imgs/1.jpg" alt="" onclick="MemeController.showEditor('imgs/1.jpg')">
+            <img src="imgs/2.jpg" alt="" onclick="MemeController.showEditor('imgs/2.jpg')">
+            <img src="imgs/3.jpg" alt="" onclick="MemeController.showEditor('imgs/3.jpg')">
+            <img src="imgs/4.jpg" alt="" onclick="MemeController.showEditor('imgs/4.jpg')">
           
         </section>
         
-        <section class="editor">
+        <section class="editor hidden">
             <canvas class="canvas" width="300" height="300"></canvas>
             
             <input type="text" class="text-input" placeholder="Enter text">

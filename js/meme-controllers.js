@@ -25,7 +25,7 @@ var MemeController = (function(MemeService) {
     
             if (text) {
                 ctx.font = fontSize + 'px Arial'
-                ctx.fillStyle = textColor;
+                ctx.fillStyle = textColor
                 ctx.strokeStyle = '#000000'
                 ctx.lineWidth = 2
                 ctx.textAlign = 'center'
@@ -61,12 +61,24 @@ var MemeController = (function(MemeService) {
         renderMeme(selectedImagePath, getText())
     }
 
+    function showEditor(imagePath) {
+        var gallerySection = document.querySelector('.gallery')
+        var editorSection = document.querySelector('.editor')
+
+        gallerySection.classList.add('hidden')
+        editorSection.classList.remove('hidden')
+
+        selectedImagePath = imagePath
+        renderMeme(selectedImagePath, enteredText)
+    }
+
     return {
         addText: addText,
         increaseFontSize: increaseFontSize,
         decreaseFontSize: decreaseFontSize,
         changeTextColor: changeTextColor,
         getText: getText,
-        renderMeme: renderMeme
+        renderMeme: renderMeme,
+        showEditor: showEditor
     }
 })(MemeService)
