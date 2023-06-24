@@ -7,7 +7,7 @@
     <title>Meme Generator</title>
 </head>
     
-<body onload="MemeController.onInit()">
+<body onload1="MemeController.onInit()">
     <header>
         <h1>Meme Generator</h1>
     </header>
@@ -22,13 +22,29 @@
         </section>
         
         <section class="editor hidden">
+         <div class="canvas-conteiner">
             <canvas class="canvas" width="300" height="300"></canvas>
+         </div>
+
+         <input type="text" class="text-input" placeholder="Enter text">
+         <div class="button-group">
+           <button class="add-button" onclick="MemeController.addText()">Add</button>
+           <button class="add-line-button" onclick="MemeController.addLine()">Add Line</button>
+           <button class="clear-text-button" onclick="MemeController.clearText()">Clear Text</button>
+         </div>
+       
+         <button class="increase-font-button" onclick="MemeController.increaseFontSize()">+</button>
+         <button class="decrease-font-button" onclick="MemeController.decreaseFontSize()">-</button>
+         <input type="color" id="colorPicker" onchange="MemeController.changeTextColor()">
+         <input type="color" id="strokeColorPicker" onchange="MemeController.changeStrokeColor()">
+         <select class="font-select" onchange="MemeController.changeFont()">
+           <option value="Arial">Arial</option>
+           <option value="Times New Roman">Times New Roman</option>
+           <option value="Courier New">Courier New</option>
+         </select>
+       </section>
+
             
-            <input type="text" class="text-input" placeholder="Enter text">
-            <button onclick="MemeController.addText()">Add</button>
-            <button onclick="MemeController.increaseFontSize()">+</button>
-            <button onclick="MemeController.decreaseFontSize()">-</button>
-            <input type="color" id="colorPicker" onchange="MemeController.changeTextColor()">
 
         </section>
     </main> 
